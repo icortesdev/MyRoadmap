@@ -2,7 +2,7 @@
 
 HTTP es un protocolo de comunicación de capa de aplicación basado en TCP/IP que estandariza la forma en que los clientes y servidores se comunican entre sí.  en sí depende de TCP/IP para obtener solicitudes y respuestas entre el cliente y el servidor. De forma predeterminada, se usa el puerto TCP 80, pero también se pueden usar otros puertos. HTTPS, sin embargo, utiliza el puerto 443. 
 
-## Metodos de solicitud:
+**Metodos de solicitud:**
 
 1. **GET:** Recupera datos del servidor.
 2. **POST:** Envía datos al servidor para crear o actualizar recursos.
