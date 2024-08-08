@@ -2,6 +2,22 @@
 
 HTTP es un protocolo de comunicación de capa de aplicación basado en TCP/IP que estandariza la forma en que los clientes y servidores se comunican entre sí.  en sí depende de TCP/IP para obtener solicitudes y respuestas entre el cliente y el servidor. De forma predeterminada, se usa el puerto TCP 80, pero también se pueden usar otros puertos. HTTPS, sin embargo, utiliza el puerto 443. 
 
+## Metodos de solicitud:
+
+1. **GET:** Recupera datos del servidor.
+2. **POST:** Envía datos al servidor para crear o actualizar recursos.
+3. **PUT:** Actualiza completamente un recurso en el servidor.
+4. **DELETE:** Elimina un recurso en el servidor.
+5. **HEAD:** Recupera los encabezados de una respuesta sin el cuerpo.
+6. **OPTIONS:** Describe las opciones de comunicación para el recurso objetivo.
+7. **PATCH:** Aplica modificaciones parciales a un recurso.
+
+## Código de estado HTTP: 
+Cada respuesta del servidor incluye un código de estado que indica el resultado de la solicitud. Algunos ejemplos comunes son:
+1. **200 OK:** La solicitud ha sido exitosa.
+2. **404 Not Found:** El recurso solicitado no se ha encontrado.
+3. **500 Internal Server Error:** El servidor encontró un error inesperado.
+
 ## La primera versión documentada de HTTP fue HTTP/0,9
 
 Se presentó en 1991. Era el protocolo más simple de la historia; tenía un solo método llamado **GET** y la respuesta tenia que ser HTML. 
