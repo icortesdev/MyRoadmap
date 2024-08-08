@@ -13,6 +13,7 @@ HTTP es un protocolo de comunicación de capa de aplicación basado en TCP/IP qu
 7. **PATCH:** Aplica modificaciones parciales a un recurso.
 
 ## Código de estado HTTP: 
+
 Cada respuesta del servidor incluye un código de estado que indica el resultado de la solicitud. Algunos ejemplos comunes son:
 1. **200 OK:** La solicitud ha sido exitosa.
 2. **404 Not Found:** El recurso solicitado no se ha encontrado.
