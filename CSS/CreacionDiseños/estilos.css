@@ -1,0 +1,96 @@
+/* Ejemplo de flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+.flex-container li {
+    list-style: none;
+}
+
+/* Grid Example */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-container article {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Ejemplo de modelo de caja */
+.box-model-example {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: #e9ecef;
+}
+
+/* Ejemplo Float */
+.float-example {
+    margin: 20px 0;
+}
+
+.float-example img {
+    float: left;
+    margin-right: 20px;
+}
+
+/* Ejemplo de posicionamiento */
+.positioning-example {
+    position: relative;
+    height: 300px;
+    background-color: #f4f4f4;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.relative-box {
+    position: relative;
+    top: 40px;
+    left: 150px;
+    width: 100px;
+    height: 100px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+}
+
+.fixed-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffc107;
+    color: white;
+    padding: 10px;
+}
+
+.sticky-box {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+    width: 100px;
+    height: 100px;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+}

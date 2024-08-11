@@ -1,0 +1,45 @@
+* {
+    text-align: center;
+    background-color: yellowgreen;
+}
+
+
+p {
+    color: blue;
+}
+
+.parrafo {
+    color: red;
+    text-align: center;
+}
+
+#parra-1 {
+    color: green;
+}
+
+#subir {
+    background-color: aqua;
+    color: black;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+#saludo {
+    background-color: rgb(222, 208, 12);
+    color: black;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+#reset {
+    background-color: rgb(222, 12, 12);
+    color: black;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
