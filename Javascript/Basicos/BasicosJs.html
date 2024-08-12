@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Basicos JavaScript</title>
+    <link rel="stylesheet" href="BasicosJs.css">
+</head>
+
+<body>
+
+    <h1 id="titulo">Interacción con JavaScript</h1>
+
+    <!-- Ejemplo de cambiar el contenido -->
+    <p id="demo">Este es un párrafo de ejemplo.</p>
+    <button onclick="document.getElementById('demo').innerHTML = '¡Contenido cambiado por JavaScript!'">
+        Cambiar Contenido
+    </button>
+
+
+    <!-- Ejemplo de cambiar el atributo src de una imagen -->
+    <h2>Cambiar la imagen</h2>
+    <img id="myImage" src="https://via.placeholder.com/150" alt="Placeholder Image">
+    <br>
+    <button
+        onclick="document.getElementById('myImage').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwCUtBAH_pSy7tkC72Vf3pK-U-WZY9Q5iPNw&s'">
+        Cambiar Imagen
+    </button>
+
+    <!-- Ejemplo de cambiar estilos CSS -->
+    <h2>Cambiar el Estilo</h2>
+    <p id="styledText">Este texto cambiará de tamaño.</p>
+    <button onclick="document.getElementById('styledText').style.fontSize = '35px'">
+        Cambiar Tamaño de Fuente
+    </button>
+
+    <!-- Ejemplo de ocultar y mostrar un elemento -->
+    <h2>Ocultar y Mostrar Elementos</h2>
+    <p id="toggleText">Este texto puede ser ocultado o mostrado.</p>
+    <button onclick="document.getElementById('toggleText').style.display ='none'">
+        Ocultar Texto
+    </button>
+    <button onclick="document.getElementById('toggleText').style.display = 'block'">
+        Mostrar Texto
+    </button>
+
+    <!-- Ejemplo de mostrar datos en diferentes formas -->
+    <h2>Mostrar Datos con JavaScript</h2>
+    <button onclick="document.getElementById('demo').innerHTML = 'Texto cambiado con innerHTML'">
+        Mostrar en Elemento HTML
+    </button>
+    <button onclick="document.write('Este texto es escrito con document.write()')">
+        Mostrar con document.write()
+    </button>
+    <button onclick="window.alert('Alerta mostrada con window.alert()')">
+        Mostrar en Alerta
+    </button>
+    <button onclick="console.log('Mensaje registrado en la consola con console.log()')">
+        Mostrar en la Consola
+    </button>
+    <script src="BasicosJs.js"></script>
+</body>
+
+</html>
