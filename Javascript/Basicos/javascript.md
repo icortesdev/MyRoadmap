@@ -139,6 +139,180 @@ En JavaScript, se utilizan diferentes formas para unir palabras en nombres de va
 	•	Camel Case: firstName, lastName (preferido por los programadores de JavaScript)
 	•	Pascal Case: FirstName, LastName
 
-# Conjunto de Caracteres en JavaScript
 
-JavaScript utiliza el conjunto de caracteres Unicode, que cubre casi todos los caracteres, puntuaciones y símbolos del mundo.
+# Valores Booleanos
+
+Muy a menudo, en la programación, necesitará un tipo de datos que solo puede tener uno de dos valores, como
+
+SÍ/NO
+ENCENDIDO/APAGADO
+true / false
+Para esto, JavaScript tiene un Booleano tipo de datos. Solo puede toma los valores cierto o false.
+
+# Comparadores 
+
+| Operador | Descripción                          | Comparación | Resultado |
+|----------|--------------------------------------|-------------|-----------|
+| `==`     | igual a                              | `x == 8`    | `false`   |
+|          |                                      | `x == 5`    | `true` 	|
+|          |                                      | `x == "5"`  | `true` 	|
+| `===`    | igual en valor e igual en tipo       | `x === 5`   | `true` 	|
+|          |                                      | `x === "5"` | `false`   |
+| `!=`     | no igual                             | `x != 8`    | `true` 	|
+| `!==`    | no igual en valor o no igual en tipo | `x !== 5`   | `false`   |
+|          |                                      | `x !== "5"` | `true` 	|
+|          |                                      | `x !== 8`   | `true` 	|
+| `>`      | mayor que                            | `x > 8`     | `false`   |
+| `<`      | menor que                            | `x < 8`     | `true` 	|
+| `>=`     | mayor o igual que                    | `x >= 8`    | `false`   |
+| `<=`     | menor o igual que                    | `x <= 8`    | `true` 	|
+
+# Operadores Logicos
+
+| Operador | Descripción | Ejemplo                        |
+|----------|-------------|--------------------------------|
+| `&&`     | y (and)     | `(x < 10 && y > 1)` es `true`  |
+| `||`     | o (or)      | `(x == 5 || y == 5)` es `false`|
+| `!`      | no (not)    | `!(x == y)` es `true`          |
+
+# Operador Condicional (Ternario)
+
+JavaScript también contiene un operador condicional que asigna un valor a una variable basado en una condición.
+
+**Sintaxis**
+
+`nombreVariable = (condición) ? valor1 : valor2;`
+
+**Ejemplo**
+
+`let puedeVotar = (edad < 18) ? "Demasiado joven" : "Lo suficientemente mayor";`
+
+Si la variable edad tiene un valor inferior a 18, el valor de la variable puedeVotar será “Demasiado joven”, de lo contrario, el valor de puedeVotar será “Lo suficientemente mayor”.
+
+Este operador es una forma concisa de hacer evaluaciones condicionales en JavaScript y es muy útil para simplificar el código.
+
+# Declaraciones condicionales 
+
+Los Conditional Statements en JavaScript permiten ejecutar diferentes bloques de código en función de si una condición es verdadera o falsa. Aquí te explico los principales tipos de sentencias condicionales de forma sencilla:
+
+1. **Declaración if**
+
+La sentencia if ejecuta un bloque de código si una condición es verdadera.
+
+`let edad = 18;`
+
+`if (edad >= 18) {`
+    `console.log("Eres mayor de edad.");`
+`}`
+
+Si la condición edad >= 18 es verdadera, se ejecuta el código dentro del bloque {}. Si es falsa, el código dentro del bloque no se ejecuta.
+
+2. **Declaración Else**
+
+La sentencia else se usa junto con if para ejecutar un bloque de código si la condición en el if es falsa.
+
+
+`let edad = 16;`
+
+`if (edad >= 18) {`
+    `console.log("Eres mayor de edad.");`
+`} else {`
+    `console.log("Eres menor de edad.");`
+`}`
+
+3. **Declaración if else**
+
+ Permite verificar múltiples condiciones. Se coloca entre un if y un else.
+
+ `let edad = 17;`
+
+`if (edad >= 18) {`
+    `console.log("Eres mayor de edad.");`
+`} else if (edad >= 13) {`
+    `console.log("Eres un adolescente.");`
+`} else {`
+    `console.log("Eres un niño.");`
+`}`
+
+El código evalúa las condiciones en orden. Si edad >= 18 es falsa pero edad >= 13 es verdadera, se ejecuta el segundo bloque. Si ambas son falsas, se ejecuta el bloque en else.
+
+4. Declaración switch
+
+El switch se utiliza para seleccionar uno entre muchos bloques de código a ejecutar. Es útil cuando se tienen muchas condiciones que verificar.
+
+`let dia = 3;`
+
+`switch (dia) {`
+   ` case 1:`
+        `console.log("Es lunes.");`
+        `break;`
+    `case 2:`
+      `  console.log("Es martes.");`
+        `break;`
+   ` case 3:`
+       ` console.log("Es miércoles.");`
+       ` break;`
+   ` default:`
+       ` console.log("No es un día válido.");`
+`}`
+
+switch evalúa la variable dia y ejecuta el bloque de código correspondiente al valor que coincide. default se ejecuta si ninguna de las condiciones se cumple.
+
+# Bucles
+
+JavaScript admite diferentes tipos de bucles:
+
+- **for**: recorre un bloque de código un número específico de veces.
+- **for/in**: recorre las propiedades de un objeto.
+- **for/of**: recorre los valores de un objeto iterable.
+- **while**: recorre un bloque de código mientras una condición especificada sea verdadera.
+- **do/while**: también recorre un bloque de código mientras una condición especificada sea verdadera.
+
+# Bucle For
+
+La declaración `for` crea un bucle con 3 expresiones opcionales:
+
+`for (expression 1; expression 2; expression 3) {`
+ ` // bloque de codigo a ejecutar`
+`}`
+
+	•  Expresión 1: Se ejecuta una vez antes de que comience el bucle. Generalmente se utiliza para inicializar una variable.
+	•	Expresión 2: Define la condición para ejecutar el bloque de código. Si es true, el bucle continúa; si es false, el bucle termina.
+	•	Expresión 3: Se ejecuta al final de cada iteración para actualizar el contador.
+
+Ejemplo:
+
+`for (let i = 0; i < 5; i++) {`
+ ` text += "El número es " + i + "<br>";`
+`}`
+
+En el ejemplo:
+
+	•	Expresión 1: Inicializa la variable i (let i = 0).
+	•	Expresión 2: Define la condición para continuar (i < 5).
+	•	Expresión 3: Incrementa i en cada iteración (i++).
+
+Expresiones Opcionales:
+
+	•	Expresión 1: Se puede usar para inicializar múltiples variables o incluso omitir si las variables ya están inicializadas.
+	•	Expresión 2: Evalúa la condición del bucle. Si se omite, debes incluir un break dentro del bucle para evitar un bucle infinito.
+	•	Expresión 3: Usualmente incrementa el valor de la variable inicial, pero puede hacer cualquier cosa o ser omitida.
+
+Alcance del Bucle:
+
+	•	var en un bucle: Una variable var dentro del bucle redeclara la variable fuera del bucle, afectando su valor global.
+	•	let en un bucle: Una variable let dentro del bucle no redeclara la variable fuera del bucle, limitando su alcance solo al interior del bucle.
+
+	`var i = 5;`
+`for (var i = 0; i < 10; i++) {`
+ ` // algún código`
+`}`
+`// Aquí i es 10`
+
+`let i = 5;`
+`for (let i = 0; i < 10; i++) {`
+  `// algún código`
+`}`
+`// Aquí i es 5`
+
+# Bucle For In
