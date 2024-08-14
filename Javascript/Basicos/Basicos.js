@@ -40,3 +40,35 @@ function myFunction() {
     }
     document.getElementById("comparaciones").innerHTML = voteable + " para votar";
 }
+
+
+// Ejemplo de un loop for en JavaScript
+
+// Este bucle for imprimirá los números del 1 al 5 en la consola.
+for (let i = 1; i <= 5; i++) {
+    console.log('Número:', i);
+}
+
+// Explicación:
+// - let i = 1: Inicializa la variable i con un valor de 1.
+// - i <= 5: Condición que se evalúa antes de cada iteración. El bucle se ejecuta mientras i sea menor o igual a 5.
+// - i++: Incrementa el valor de i en 1 después de cada iteración.
+// - console.log('Número:', i): Imprime el valor actual de i en la consola.
+
+
+//Ejemplo foreach
+
+const letras = ['a', 'b', 'c'];
+
+letras.forEach((letra, indice) => {
+  console.log(`Letra en el índice ${indice} es ${letra}`);
+});
+
+//Ejemplo while
+
+let contador = 0;
+
+while (contador < 5) {
+  console.log('Contador:', contador);
+  contador++;
+}

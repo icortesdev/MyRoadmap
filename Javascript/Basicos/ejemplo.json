@@ -1,0 +1,9 @@
+
+{
+    "nombre": "Juan",
+    "hobbies": ["leer", "correr", "programar"],
+    "educacion": {
+      "grado": "Ingeniería en Computación",
+      "universidad": "Universidad de Ejemplo"
+    }
+  }

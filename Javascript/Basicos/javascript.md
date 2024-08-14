@@ -316,3 +316,183 @@ Alcance del Bucle:
 `// Aquí i es 5`
 
 # Bucle For In
+
+El loop **for in** en JavaScript se utiliza para iterar sobre todas las propiedades enumerables de un objeto, o sobre los índices de un array. A diferencia del loop for tradicional, que se usa para iterar un número determinado de veces, for...in está diseñado para recorrer las propiedades de un objeto o las claves de un array.
+
+Sintaxis:
+`for (variable in objeto) {`
+  `// Código que se ejecuta en cada iteración`
+`}`
+
+	•	variable: Es una variable que se asignará al nombre de cada propiedad o índice en cada iteración.
+	•	objeto: Es el objeto o array sobre el cual se va a iterar.
+
+**Ejemplo con un objeto:**
+
+`const persona = {`
+  `nombre: 'Juan',`
+  `edad: 30,`
+  `profesion: 'Desarrollador'`
+`};`
+
+`for (let clave in persona) {`
+ ` console.log(clave + ': ' + persona[clave]);`
+`}`
+
+**Explicación:**
+
+	•	El loop for...in recorre cada propiedad del objeto persona.
+	•	En cada iteración, la variable clave toma el nombre de la propiedad actual (nombre, edad, profesion).
+	•	Dentro del bucle, persona[clave] devuelve el valor de la propiedad correspondiente, que se imprime en la consola.
+
+
+**Cuándo usar for in:**
+
+	•	Es más adecuado para iterar sobre las propiedades de un objeto.
+	•	Para iterar sobre arrays, for...in es menos común, ya que hay otros métodos más apropiados como for, for...of, o forEach.
+
+# ForEach 
+
+El método forEach en JavaScript es una función incorporada para recorrer los elementos de un array y ejecutar una función para cada uno de ellos. Es una alternativa más legible y directa al bucle for tradicional cuando quieres iterar sobre los elementos de un array y realizar una acción en cada uno de ellos.
+
+**Sintaxis:**
+
+`array.forEach(function(elemento, indice, array) {`
+ ` // Código que se ejecuta para cada elemento`
+`});`
+
+	•	array: Es el array sobre el que se va a iterar.
+	•	elemento: El elemento actual del array que está siendo procesado.
+	•	indice (opcional): El índice del elemento actual.
+	•	array (opcional): El array sobre el que se está iterando.
+
+**Ejemplo:**
+
+`const numeros = [1, 2, 3, 4, 5];`
+
+`numeros.forEach(function(numero) {`
+ ` console.log('Número:', numero);`
+`});`
+
+	•	forEach recorre el array numeros y ejecuta la función proporcionada para cada elemento.
+	•	En cada iteración, numero es el elemento actual del array.
+	•	Se imprime en la consola cada número del array.
+
+**Características y Consideraciones:**
+
+1.	**Inmutabilidad:** forEach no modifica el array original, a menos que se haga explícitamente dentro de la función que se pasa. Es una buena práctica no modificar el array dentro de forEach.
+
+2.	**No retorna valor:** A diferencia de otros métodos de array como map o filter, forEach no devuelve un nuevo array. Simplemente ejecuta una función para cada elemento.
+
+3.	**Asincronía:** Si dentro de un forEach se utilizan operaciones asíncronas (como llamadas a API con fetch), el forEach no espera a que esas operaciones se completen antes de pasar al siguiente elemento. Esto puede llevar a comportamientos inesperados.
+
+4.	**No se puede romper:** A diferencia de un bucle for, no se puede usar break para salir de un forEach antes de que termine de recorrer todos los elementos. Si necesitas salir de un bucle antes de que termine, podrías considerar usar un for o for...of.
+
+**Cuándo usar forEach**
+
+	•	forEach es ideal para ejecutar efectos secundarios en cada elemento de un array, como imprimir valores, realizar modificaciones en un objeto externo, o ejecutar funciones que no necesitan devolver un valor.
+	•	Si necesitas un nuevo array como resultado de la iteración, considera usar map. Si necesitas filtrar elementos, usa filter. Si buscas un elemento en particular, usa find.
+
+
+# Loop While
+
+El loop while en JavaScript se utiliza para ejecutar un bloque de código repetidamente mientras una condición específica sea verdadera. Es especialmente útil cuando no se conoce de antemano cuántas veces debe ejecutarse el bucle.
+
+`while (condicion) {`
+ ` // Código a ejecutar mientras la condición sea verdadera`
+`}`
+
+•	condicion: Es una expresión que se evalúa antes de cada iteración. Si es true, el bucle se ejecuta; si es false, el bucle termina.
+
+**Ejemplo:**
+
+`let contador = 0;`
+
+`while (contador < 5) {`
+ `console.log('Contador:', contador);`
+ ` contador++;`
+`}`
+
+**Características clave:**
+
+1.	Condición al inicio: El while verifica la condición antes de ejecutar el bloque de código. Si la condición es falsa desde el principio, el código dentro del bucle no se ejecutará ni una sola vez.
+2.	Bucles infinitos: Si la condición nunca se vuelve false, el while seguirá ejecutándose indefinidamente, lo que puede llevar a un **“bucle infinito”** que bloquea la aplicación. Es importante asegurarse de que la condición eventualmente se vuelva false.
+
+
+# Declaración break y continue
+
+La declaración **break** se usa para terminar un bucle prematuramente. Cuando se encuentra un break dentro de un bucle, el control del programa “salta” fuera del bucle, terminando su ejecución inmediatamente. Esto significa que ninguna otra iteración del bucle se ejecutará, y el programa continuará ejecutando el código que viene después del bucle.
+
+`for (let i = 0; i < 10; i++) {`
+ ` if (i === 5) {`
+   ` break; // Sale del bucle cuando i es igual a 5`
+ ` }`
+  `console.log(i);`
+`}`
+
+`console.log('El bucle ha terminado.');`
+
+La declaración **continue** se utiliza para omitir la iteración actual de un bucle y pasar directamente a la siguiente. Cuando continue se ejecuta, el bucle no ejecuta el código que sigue dentro de la iteración actual; en su lugar, salta directamente al siguiente ciclo del bucle.
+
+`for (let i = 0; i < 10; i++) {`
+ ` if (i === 5) {`
+    `continue; // Omite la iteración cuando i es igual a 5`
+ ` }`
+  `console.log(i);`
+`}`
+
+`console.log('El bucle ha terminado.');`
+
+
+# ¿QUE ES JSON?
+
+JSON (JavaScript Object Notation) es un formato de texto ligero y fácil de leer/escribir para el intercambio de datos. Es ampliamente utilizado para transmitir datos entre un servidor y una aplicación web, o entre distintas aplicaciones, debido a su simplicidad y compatibilidad con la mayoría de los lenguajes de programación.
+
+**Características principales de JSON:**
+
+1.	Formato de Texto: JSON es un formato basado en texto, lo que significa que es fácilmente legible tanto por humanos como por máquinas.
+2.	Ligero: JSON es minimalista y no contiene datos innecesarios, lo que lo hace eficiente para transferencias de datos.
+3.	Estructura basada en pares clave-valor: Los datos en JSON se representan como pares de clave-valor, donde una clave (nombre del campo) está asociada a un valor.
+
+Estructura de JSON
+
+JSON utiliza dos estructuras principales:
+
+1.	Objetos: Se representan como un conjunto de pares clave-valor encerrados entre llaves {}.
+	•	Cada clave es una cadena de texto (string).
+	•	Cada valor puede ser un número, cadena, booleano, array, otro objeto, o null.
+
+	**Ejemplo de un objeto JSON:**
+
+	`{`
+ ` "nombre": "Juan",`
+ `"edad": 30,`
+  `"profesion": "Desarrollador",`
+  `"esCasado": false`
+`}`
+
+en el archivo[ejemplo.json](./ejemplo.json) se puede observar otro ejemplo.
+
+
+	2.	Arrays: Son listas ordenadas de valores, encerradas entre corchetes [].
+	•	Los valores pueden ser de cualquier tipo, incluyendo objetos y otros arrays.
+
+**Ejemplo de un array JSON:**
+`{`
+  `"coloresFavoritos": ["rojo", "azul", "verde"]`
+`}`
+
+**Uso común de JSON**
+
+JSON se usa principalmente para intercambiar datos entre un cliente (como un navegador web) y un servidor. Por ejemplo, cuando una aplicación web necesita obtener datos de un servidor, esos datos se suelen recibir en formato JSON.
+
+**Ejemplo de un intercambio de datos JSON:**
+
+	1.	Solicitud al servidor: Una aplicación solicita los datos de un usuario.
+	2.	Respuesta del servidor: El servidor envía los datos en formato JSON.
+
+**Ventajas de JSON:**
+
+	•	Simplicidad: Su estructura sencilla lo hace fácil de leer y escribir.
+	•	Compatibilidad: JSON es compatible con la mayoría de los lenguajes de programación, como JavaScript, Python, Java, y más.
+	•	Eficiencia: JSON es ligero, lo que lo hace ideal para el intercambio de datos en aplicaciones web.
