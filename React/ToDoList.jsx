@@ -23,6 +23,8 @@ function App() {
             };
             setListaTareas([...listaTareas, nuevaTarea]); // Añade la nueva tarea a la lista de tareas
             setTarea(''); // Limpia el campo de input después de añadir la tarea
+        } else {
+            alert('El input esta vacio, añade una tarea.')
         }
     };
 
