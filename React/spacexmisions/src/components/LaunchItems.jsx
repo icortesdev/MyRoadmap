@@ -3,10 +3,12 @@ import { FaCalendar } from "react-icons/fa";
 import dayjs from 'dayjs';
 import 'dayjs/locale/es'
 import { Box, Button, Flex, Spacer, Tag, Text } from "@chakra-ui/react"
-const LaunchItem = (launch) => {
-    return (
-        <>
-            <Box
+import { Link } from "react-router-dom";
+
+const LaunchItems = (launch) => {
+  return (
+    <>
+        <Box
                 bg="gray.100"
                 p={4}
                 m={4}
@@ -29,10 +31,14 @@ const LaunchItem = (launch) => {
                             .format("D MMMM, YYYY")}
                     </Text>
                 </Flex>
-                <Button mt={2} colorScheme='purple'>More Details</Button>
+                <Link to={`/launch/${launch.flight_number}`}>
+                    <Button mt={2} colorScheme="purple">
+                        More Details
+                    </Button>
+                </Link>
             </Box>
-        </>
-    )
+    </>
+  )
 }
 
-export default LaunchItem
+export default LaunchItems
