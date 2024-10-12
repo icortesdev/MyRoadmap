@@ -1,5 +1,7 @@
 # Creación Chatbots WhatsApp mediante Builderbot:
 
+**[Repositorio de chatbot](https://github.com/icortesdev/chatbot-tienda)**
+
 ## Como iniciar builderbot:
 
 `pnpm create builderbot@latest --provider=baileys --database=memory --language=js`
